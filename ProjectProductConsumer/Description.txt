@@ -1,0 +1,35 @@
+* We are having a company that produces and consume product
+* In company we have two modules/function--> produceItem() and consumeItem()  
+* We have producer and consumer,  Assuming Producer name "John" and Consumer name is "Peter".
+*  Refer this link: -->   https://docs.google.com/document/d/1Kcrv-V1HPNcPtrs_xNHU27J9rrKHmQ1ihvLVqvX84Ww/edit      <<better visualisation>>
+
+
+
+*Problem Statement: We have one buffer means it can store only one item at a time.
+* We need to do synchronisation like P1 product consumed by C1 then only P2 produced again consumed by C2 then so on....
+
+
+* Here we need that one thread is producing so it not get consumed ,vice-versa also.
+* So we use Synchronised Keyword which helps to run a thread at a time blocking other threads.
+
+
+
+* We need two things Here
+* 1) Synchronisation: If producer is producing so consumer is not consuming and vice-versa
+* 2) Inter-thread Communication: Like one thread task is complete so it convey message to another thread to proceed, vice-versa.(notify,notifyAll())
+
+
+
+*Company.java Class Description
+* Contain producer and consumer class.
+* Making instance variable n.
+* When we run produceItem so it sets the value in instance varaible.
+* When we run consumeItem so it return the value of instance variable.
+*Using synchorised keyword for both as we want blocking of one when another runs.
+
+*When sleep time of both the threads is same like 1 1 s so it will run fine but suppose consuem time is 2s then it create problem
+*Make a vertical line and visualise it(for better understanding)
+* Now we need here "INTER THREAD COMMUNICATION" for this we use "f" variable in company class
+* Here if   [f==false]  then it means producer chance to produce but it [f==true] then consumer chance to consume.
+*
+
