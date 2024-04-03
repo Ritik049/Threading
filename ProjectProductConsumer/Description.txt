@@ -31,5 +31,6 @@
 *Make a vertical line and visualise it(for better understanding)
 * Now we need here "INTER THREAD COMMUNICATION" for this we use "f" variable in company class
 * Here if   [f==false]  then it means producer chance to produce but it [f==true] then consumer chance to consume.
-*
+*We use wait() and notify function to wait and notify other thread. 
+SEE CODE ONCE how it works.
 

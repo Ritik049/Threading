@@ -29,7 +29,7 @@ class Company{
     
           System.out.println("Consumed Item "+ this.n);
           f = false;
-          notify();                                          //IT notify that ts work get completed.
+          notify();                                           //IT notify that ts work get completed.
           return this.n;
     }
 }
